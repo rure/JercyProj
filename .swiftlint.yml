@@ -1,0 +1,4 @@
+excluded:
+  - Pods
+force_cast: warning # implicitly
+

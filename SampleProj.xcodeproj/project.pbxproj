@@ -96,6 +96,8 @@
 			buildConfigurationList = D5E5A79D2196BBCD00210786 /* Build configuration list for PBXNativeTarget "SampleProj" */;
 			buildPhases = (
 				EE2D210453AD110F3F160C27 /* [CP] Check Pods Manifest.lock */,
+				D527C7B02196C4C5004A7E01 /* Swift Lint Autocorrect */,
+				D5E5A7A02196C36700210786 /* Swift Lint */,
 				D5E5A7872196BBCC00210786 /* Sources */,
 				D5E5A7882196BBCC00210786 /* Frameworks */,
 				D5E5A7892196BBCC00210786 /* Resources */,
@@ -174,6 +176,42 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleProj/Pods-SampleProj-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D527C7B02196C4C5004A7E01 /* Swift Lint Autocorrect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint Autocorrect";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		D5E5A7A02196C36700210786 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		EE2D210453AD110F3F160C27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
